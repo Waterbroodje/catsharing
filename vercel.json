@@ -1,5 +1,12 @@
 {
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.5.2"
+    }
+  },
   "routes": [
-    { "src": "/(.*)",  "dest": "/api/index.php" }
-  ]
+    { "src": "/(.*)",  "dest": "/api/index.php" },
+    { "src": "/(.*)",  "dest": "/api/share.php" },
+    { "src": "style.css", "dest": "/style.css" },
+    { "src": "script.js", "dest": "script.js" }]
 }
