@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Inter:wght@500;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Inter, serif;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 74px;
+    margin-bottom: 42px;
+}
+
+.cat img {
+    max-width: 60%;
+    max-height: 60%;
+    border-radius: 15px;
+}
+
+.cat {
+    margin: auto;
+    max-width: 30%;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sharebutton {
+
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.sharebutton img {
+    width: 50%;
+    height: auto;
+}
+
+.color {
+    background-image: linear-gradient(270deg, rgba(255,0,247,1) 20%, rgba(255,0,0,1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cat-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px; /* Add some space between buttons */
+}
+
+.cat-buttons button {
+    padding: 10px 20px; /* Adjust padding for larger buttons */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Add hover effect for buttons */
+.cat-buttons button:hover {
+    background-color: #f6f6f6;
+}

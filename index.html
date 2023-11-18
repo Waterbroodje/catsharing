@@ -1,0 +1,59 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Sharing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Generate & Share cats. <strong class="color">Easy & Free</strong>.</h1>
+    <div class="cat">
+        <img id="catImage">
+        <div class="cat-buttons">
+            <button onclick="generateNewCat()">Generate New Cat</button>
+            <button onclick="shareCat()">Share</button>
+        </div>
+    </div>
+
+    <script>
+        function generateNewCat() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    var newCatImage = document.getElementById("catImage");
+
+                    // Set the image source with the cat ID as a parameter
+                    newCatImage.src = data[0].url;
+
+                    // Store the cat ID in a global variable for later use
+                    window.currentCatID = data[0].id;
+                }
+            };
+
+            xhr.open("GET", "https://api.thecatapi.com/v1/images/search/", true);
+            xhr.send();
+        }
+
+        function shareCat() {
+           /*
+            // Get the current URL and append the stored cat ID
+            var currentURL = window.location.href;
+            var catID = window.currentCatID;
+            var shareURL = currentURL + catID;
+            */
+            var catID = window.currentCatID;
+            var shareURL = "https://cdn2.thecatapi.com/images/" + catID + ".jpg";
+
+            // Copy the URL to the clipboard
+            navigator.clipboard.writeText(shareURL);
+        }
+
+        // Call the generateNewCat function when the page is loaded
+        generateNewCat();
+    </script>
+</body>
+</html>
