@@ -8,6 +8,7 @@ function generateNewCat() {
             newCatImage.src = data[0].url;
 
             window.currentCatID = data[0].id;
+            window.catURL = data[0].url;
         }
     };
 
@@ -45,8 +46,7 @@ function shareCat() {
  */
 
 function shareCat() {
-    let catID = window.currentCatID;
-    let shareURL = `https://catsharing.waterbroodje.nl/${catID}`; // Replace with your actual domain
+    let shareURL = window.catURL;
 
     // Copy the URL to the clipboard
     navigator.clipboard.writeText(shareURL).then(() => {
