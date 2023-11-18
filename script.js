@@ -65,6 +65,3 @@ function shareCat() {
         console.error('Error copying URL to clipboard:', error);
     });
 }
-
-
-generateNewCat();

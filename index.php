@@ -12,7 +12,7 @@
 <body>
     <h1>Generate & Share cats. <strong class="color">Easy & Free</strong>.</h1>
     <div class="cat">
-        <img id="catImage">
+        <img id="catImage" src="assets/placeholder.png">
         <div class="cat-buttons">
             <button onclick="generateNewCat()">Generate New Cat</button>
             <button onclick="shareCat()">Share</button>
