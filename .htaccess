@@ -3,5 +3,5 @@
     RewriteBase /catsharing/
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^([^/]+)$ share.php?catId=$1 [L,QSA]
+    RewriteRule ^([^/]+)$ share.html?catId=$1 [L,QSA]
 </IfModule>

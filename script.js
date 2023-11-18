@@ -40,7 +40,7 @@ function shareCat() {
 function shareCat() {
     let catID = window.currentCatID;
     // Redirect to the shared cat page
-    window.location.href = `share.php?catId=${catID}`;
+    window.location.href = `share.html?catId=${catID}`;
 }
  */
 
